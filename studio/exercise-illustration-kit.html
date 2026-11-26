@@ -1,0 +1,426 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Exercise Illustration Kit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* Layout: single reading column, reference plate up top, spec tables below, source last */
+:root{
+  --bg:#f6f6f4; --surface:#ffffff; --ink:#151617; --muted:#5d6063; --line:#dcdcd8; --accent:#d4542b;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Source Sans 3",-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#141516;--surface:#1d1f21;--ink:#ececea;--muted:#a3a6a9;--line:#323538;--accent:#f07a52;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141516;--surface:#1d1f21;--ink:#ececea;--muted:#a3a6a9;--line:#323538;--accent:#f07a52;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--body)}
+.wrap{max-width:820px;margin:0 auto;padding-block:32px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:40px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font:600 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+h1{font:700 clamp(36px,7vw,56px)/1 var(--display);letter-spacing:.01em;margin:0;text-wrap:balance;text-transform:uppercase}
+h2{font:700 26px/1.1 var(--display);text-transform:uppercase;letter-spacing:.03em;margin:0 0 12px}
+p{margin:0;max-width:65ch}
+.lede{color:var(--muted);font-size:18px}
+figure{margin:0;display:flex;flex-direction:column;gap:10px}
+.plate{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.plate svg{display:block;width:100%;height:auto}
+figcaption{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+figcaption b{color:var(--ink);font-weight:600}
+ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:65ch}
+.no{color:var(--muted)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:460px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font:600 12px/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--bg)}
+td code,p code,li code{font:13px var(--mono);font-variant-numeric:tabular-nums}
+td:first-child{font-weight:600;white-space:nowrap}
+.swatch{display:inline-block;width:12px;height:12px;border-radius:3px;border:1px solid var(--line);vertical-align:-1px;margin-right:6px}
+ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px;max-width:65ch}
+.note{font-size:15px;color:var(--muted);margin-top:10px}
+.src-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.src-head h2{margin:0}
+button{font:600 14px var(--body);color:var(--surface);background:var(--ink);border:0;border-radius:6px;padding:8px 14px;cursor:pointer}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+pre{margin:0;max-height:420px;overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;font:12.5px/1.5 var(--mono);white-space:pre}
+section{min-width:0}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.card{display:flex;flex-direction:column;gap:8px;min-width:0}
+.card img{display:block;width:100%;height:auto;background:#fff;border:1px solid var(--line);border-radius:8px}
+.card-foot{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.card-foot span{font-weight:600;font-size:15px;min-width:0}
+.card-foot button{padding:6px 10px;font-size:13px;flex:none}
+</style>
+
+<div class="wrap">
+<header>
+  <span class="eyebrow">Style reference · Forearms &amp; Biceps</span>
+  <h1>Exercise Illustration Kit</h1>
+  <p class="lede">The approved Barbell Reverse Curl and the rules for drawing every other exercise in the same style.</p>
+</header>
+
+<figure>
+  <div class="plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180">
+  <defs>
+    <radialGradient id="floor">
+      <stop offset="0" stop-color="#000" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- athletic body: head, V-torso, shorts, tapered legs (x=0 centre) -->
+    <g id="body">
+      <ellipse cx="0" cy="164" rx="40" ry="5" fill="url(#floor)"/>
+      <ellipse cx="0" cy="17" rx="9" ry="11" fill="#111"/>
+      <path d="M-4 26 L4 26 L5 31 L-5 31 Z" fill="#111"/>
+      <path d="M-5 29 C-8 33 -14 34 -18.5 37.5 C-21.5 41 -21 48 -18 55 C-15.5 66 -12.5 78 -10.5 88
+               L10.5 88 C12.5 78 15.5 66 18 55 C21 48 21.5 41 18.5 37.5 C14 34 8 33 5 29 Z" fill="#111"/>
+      <path d="M-11 86 L11 86 L14.5 102 L2 102 L0 95 L-2 102 L-14.5 102 Z" fill="#111"/>
+      <path d="M-14.5 99 C-16 112 -14 124 -11 132 C-12.5 140 -11.5 150 -10 158 L-4 158
+               C-4 148 -3 139 -3 131 C-2 120 -1.8 108 -2.2 99 Z" fill="#111"/>
+      <path d="M14.5 99 C16 112 14 124 11 132 C12.5 140 11.5 150 10 158 L4 158
+               C4 148 3 139 3 131 C2 120 1.8 108 2.2 99 Z" fill="#111"/>
+      <path d="M-10.5 156 Q-15 157 -15 160 L-4 160 L-4 156 Z" fill="#111"/>
+      <path d="M10.5 156 Q15 157 15 160 L4 160 L4 156 Z" fill="#111"/>
+      <line x1="0" y1="97" x2="0" y2="161" stroke="#fff" stroke-width="2.4"/>
+      <!-- negative-space muscle definition -->
+      <g fill="none" stroke="#fff" stroke-width="1.1" stroke-linecap="round" opacity=".9">
+        <path d="M-12 48 Q-6 53 0 50.5 Q6 53 12 48"/>
+        <path d="M0 55 L0 84"/>
+        <path d="M-5 63 L-1.5 63.5 M1.5 63.5 L5 63 M-4.5 71 L-1.5 71.5 M1.5 71.5 L4.5 71"/>
+        <path d="M-9 118 Q-7.5 125 -6.8 131 M9 118 Q7.5 125 6.8 131"/>
+      </g>
+    </g>
+
+    <!-- upper arm: shoulder at (0,0), elbow at (0,32) -->
+    <path id="upper" d="M-4 -2 C-7.5 4 -7 15 -5 22 C-4.2 27 -3.5 30 -3.2 33 L3.2 33
+                        C3.6 26 4 16 3.6 6 C3.2 0 0.8 -3 -4 -2 Z"/>
+    <!-- forearm: elbow at (0,0), wrist at (0,26) — thick near elbow, tapering -->
+    <path id="fore" d="M-3.8 -1 C-5 5 -4 15 -2.2 26 L2.2 26 C2.8 16 3.8 6 3.6 -1 Z"/>
+
+    <g id="plate">
+      <rect x="-4" y="-16" width="8" height="32" rx="2.2" fill="#111"/>
+      <rect x="4" y="-9" width="4.5" height="18" rx="1.5" fill="#111"/>
+      <line x1="-1.5" y1="-12" x2="-1.5" y2="12" stroke="#fff" stroke-width=".9" stroke-linecap="round" opacity=".7"/>
+    </g>
+
+    <marker id="tip" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <rect width="320" height="180" fill="#fff"/>
+
+  <!-- ================= 1 · START ================= -->
+  <g transform="translate(80 8)">
+    <use href="#body"/>
+    <g fill="#111" stroke="#fff" stroke-width="2.6" paint-order="stroke" stroke-linejoin="round">
+      <use href="#upper" transform="translate(-20.5 41) rotate(5)"/>
+      <use href="#fore" transform="translate(-23 73) rotate(-7)"/>
+      <g transform="scale(-1 1)">
+        <use href="#upper" transform="translate(-20.5 41) rotate(5)"/>
+        <use href="#fore" transform="translate(-23 73) rotate(-7)"/>
+      </g>
+    </g>
+    <line x1="-54" y1="100" x2="54" y2="100" stroke="#fff" stroke-width="6.5"/>
+    <line x1="-54" y1="100" x2="54" y2="100" stroke="#111" stroke-width="3.2" stroke-linecap="round"/>
+    <use href="#plate" transform="translate(-43 100) scale(-1 1)"/>
+    <use href="#plate" transform="translate(43 100)"/>
+    <g fill="#111" stroke="#fff" stroke-width="1.6" paint-order="stroke">
+      <ellipse cx="-20" cy="100" rx="4" ry="4.6"/>
+      <ellipse cx="20" cy="100" rx="4" ry="4.6"/>
+    </g>
+  </g>
+
+  <!-- ================= 2 · CURL ================= -->
+  <g transform="translate(240 8)">
+    <!-- ghost of the starting bar -->
+    <g opacity=".14">
+      <line x1="-54" y1="100" x2="54" y2="100" stroke="#111" stroke-width="3.2" stroke-linecap="round"/>
+      <use href="#plate" transform="translate(-43 100) scale(-1 1)"/>
+      <use href="#plate" transform="translate(43 100)"/>
+    </g>
+    <use href="#body"/>
+    <g fill="#111" stroke="#fff" stroke-width="2.6" paint-order="stroke" stroke-linejoin="round">
+      <use href="#upper" transform="translate(-20.5 41) rotate(5)"/>
+      <use href="#fore" transform="translate(-23 73) rotate(150)"/>
+      <g transform="scale(-1 1)">
+        <use href="#upper" transform="translate(-20.5 41) rotate(5)"/>
+        <use href="#fore" transform="translate(-23 73) rotate(150)"/>
+      </g>
+    </g>
+    <line x1="-64" y1="50" x2="64" y2="50" stroke="#fff" stroke-width="6.5"/>
+    <line x1="-64" y1="50" x2="64" y2="50" stroke="#111" stroke-width="3.2" stroke-linecap="round"/>
+    <use href="#plate" transform="translate(-53 50) scale(-1 1)"/>
+    <use href="#plate" transform="translate(53 50)"/>
+    <g fill="#111" stroke="#fff" stroke-width="1.6" paint-order="stroke">
+      <ellipse cx="-36" cy="50" rx="4" ry="4.6"/>
+      <ellipse cx="36" cy="50" rx="4" ry="4.6"/>
+    </g>
+    <!-- swept motion arcs -->
+    <g fill="none" stroke="#111" stroke-linecap="round">
+      <path d="M-46 98 Q-70 84 -68 72" stroke-width="1.8" marker-end="url(#tip)"/>
+      <path d="M-52 97 Q-74 86 -73 76" stroke-width="1" opacity=".35"/>
+      <path d="M46 98 Q70 84 68 72" stroke-width="1.8" marker-end="url(#tip)"/>
+      <path d="M52 97 Q74 86 73 76" stroke-width="1" opacity=".35"/>
+    </g>
+  </g>
+</svg>
+</div>
+  <figcaption><span><b>Barbell Reverse Curl</b> · 1 start → 2 end</span><span>viewBox 320 × 180 · export 960 × 540</span></figcaption>
+</figure>
+
+<section>
+  <h2>Look and feel</h2>
+  <ul>
+    <li>Black athletic silhouette on white, close to classic gym pictograms but more refined.</li>
+    <li>Lean, athletic and balanced build: V-shaped torso, slim arms, legs slightly fuller than the upper body.</li>
+    <li>Thin white lines cut into the black for pecs, abs, knees and the gap between the legs.</li>
+    <li>A thin white halo around limbs and equipment wherever they overlap the body.</li>
+    <li>Two frames, start on the left and end on the right. No text inside the image.</li>
+    <li>The end frame shows a faded copy of the equipment at its start position, plus curved motion arrows.</li>
+  </ul>
+  <p class="note no">Avoid: colour, gradients on the figure, a full outline around the figure, faces, text, bulky bodybuilder proportions.</p>
+</section>
+
+<section>
+  <h2>Canvas</h2>
+  <div class="tbl"><table>
+    <tr><th>Property</th><th>Value</th></tr>
+    <tr><td>viewBox</td><td><code>0 0 320 180</code></td></tr>
+    <tr><td>Export</td><td>960 × 540 PNG (3×). The SVG is the master file.</td></tr>
+    <tr><td>Background</td><td><code>#ffffff</code></td></tr>
+    <tr><td>Frame 1</td><td><code>translate(80 8)</code></td></tr>
+    <tr><td>Frame 2</td><td><code>translate(240 8)</code></td></tr>
+    <tr><td>Single pose</td><td>One frame at <code>translate(160 8)</code> for holds and stretches</td></tr>
+    <tr><td>Floor shadow</td><td>Ellipse <code>cx 0 cy 164 rx 40 ry 5</code>, black to transparent at 22%</td></tr>
+  </table></div>
+</section>
+
+<section>
+  <h2>Colours and strokes</h2>
+  <div class="tbl"><table>
+    <tr><th>Element</th><th>Spec</th></tr>
+    <tr><td><span class="swatch" style="background:#111"></span>Ink</td><td><code>#111111</code> for figure, equipment, arrows</td></tr>
+    <tr><td><span class="swatch" style="background:#fff"></span>Paper</td><td><code>#ffffff</code> for background, halos, muscle lines</td></tr>
+    <tr><td>Ghost equipment</td><td>Ink at <code>opacity .14</code></td></tr>
+    <tr><td>Muscle lines</td><td>White, width <code>1.1</code>, round caps, opacity .9</td></tr>
+    <tr><td>Leg gap</td><td>White line, width <code>2.4</code>, x 0 from y 97 to 161</td></tr>
+    <tr><td>Limb halo</td><td>White stroke <code>2.6</code> with <code>paint-order="stroke"</code></td></tr>
+    <tr><td>Hand halo</td><td>White stroke <code>1.6</code></td></tr>
+    <tr><td>Bar</td><td>Black <code>3.2</code> over a white <code>6.5</code> halo</td></tr>
+    <tr><td>Main arrow</td><td>Black <code>1.8</code>, round cap, triangle marker</td></tr>
+    <tr><td>Echo arrow</td><td>Black <code>1.0</code>, opacity .35, about 6 units outside the main arrow</td></tr>
+  </table></div>
+</section>
+
+<section>
+  <h2>Body proportions</h2>
+  <div class="tbl"><table>
+    <tr><th>Part</th><th>Frame units (x 0 = centre)</th></tr>
+    <tr><td>Head</td><td>Ellipse <code>rx 9 ry 11</code> at <code>(0, 17)</code></td></tr>
+    <tr><td>Neck</td><td>8 → 10 wide, y 26–31</td></tr>
+    <tr><td>Shoulders</td><td>±18.5 at y 37.5, deltoid curve out to ±21.5</td></tr>
+    <tr><td>Armpit</td><td>±18 at y 55</td></tr>
+    <tr><td>Waist</td><td>±10.5 at y 88</td></tr>
+    <tr><td>Hips</td><td>±11 at y 86 → ±14.5 at y 102</td></tr>
+    <tr><td>Thigh</td><td>Outer edge to −16 near y 112</td></tr>
+    <tr><td>Knee</td><td>±11 at y 132</td></tr>
+    <tr><td>Calf</td><td>Outer bulge to ±12.5 at y 140</td></tr>
+    <tr><td>Feet</td><td>Ankle ±10 at y 158, foot ±15 at y 160</td></tr>
+    <tr><td>Shoulder joint</td><td><code>(−20.5, 41)</code>, mirrored for the right side</td></tr>
+    <tr><td>Upper arm</td><td>Length 33, <code>rotate(5)</code> when hanging</td></tr>
+    <tr><td>Elbow</td><td>About <code>(−23, 73)</code></td></tr>
+    <tr><td>Forearm</td><td>Length 26, about 8 wide at the elbow tapering to 4.4 at the wrist</td></tr>
+    <tr><td>Hand</td><td>Ellipse <code>rx 4 ry 4.6</code></td></tr>
+  </table></div>
+  <p class="note">Arms are reusable symbols (<code>#upper</code>, <code>#fore</code>) with the joint at the origin. Pose them only with <code>translate()</code> and <code>rotate()</code>, then reuse the left side inside <code>scale(-1 1)</code> for the right.</p>
+</section>
+
+<section>
+  <h2>Posing the forearm</h2>
+  <div class="tbl"><table>
+    <tr><th>Pose</th><th>rotate</th><th>Wrist lands at</th></tr>
+    <tr><td>Arms hanging</td><td><code>−7°</code></td><td><code>(−20, 99)</code></td></tr>
+    <tr><td>Full curl, front view</td><td><code>150°</code></td><td><code>(−36, 50)</code></td></tr>
+  </table></div>
+  <p class="note">Wrist = elbow + 26 × (−sin θ, cos θ).</p>
+</section>
+
+<section>
+  <h2>Equipment</h2>
+  <div class="tbl"><table>
+    <tr><th>Item</th><th>Spec</th></tr>
+    <tr><td>Plate</td><td>Main <code>8 × 32</code> (rx 2.2), collar <code>4.5 × 18</code> (rx 1.5), one white highlight line at x −1.5, opacity .7</td></tr>
+    <tr><td>Bar, hanging</td><td>y 100, ends ±54, plates at ±43</td></tr>
+    <tr><td>Bar, raised</td><td>Ends ±64, plates at ±53 so the forearms stay visible</td></tr>
+    <tr><td>Dumbbell</td><td>Handle width 3, about 22 long, white 6 halo. Heads at 60% of plate size with the same highlight.</td></tr>
+    <tr><td>Bench, cable, machine</td><td>Flat black shapes with rx 2–3 corners and white halos where the figure overlaps. Keep them low-detail.</td></tr>
+  </table></div>
+</section>
+
+<section>
+  <h2>Layer order</h2>
+  <ol>
+    <li>Ghost equipment (end frame only)</li>
+    <li>Body: shadow, head, torso, shorts, legs, feet, leg gap, muscle lines</li>
+    <li>Arms: upper arm, then forearm, with halos</li>
+    <li>Equipment halo, then equipment</li>
+    <li>Hands, on top of the bar so the grip reads</li>
+    <li>Motion arrows (end frame only)</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Making a new exercise</h2>
+  <ol>
+    <li>Copy the reference SVG and keep its <code>&lt;defs&gt;</code> unchanged.</li>
+    <li>Decide the start and end pose. Change only arm rotations, equipment position and hand positions.</li>
+    <li>For seated or bent-over exercises, add a new body pose next to <code>#body</code> with the same proportions and line weights.</li>
+    <li>Put the ghost equipment in the end frame at the start position, with arrows from the ghost to the new position.</li>
+    <li>Check the PNG at full size and at thumbnail size (about 120 px wide): arms visible, halos separating every overlap, lean build, arrows clear of plates and body.</li>
+    <li>Name files in kebab-case, for example <code>reverse-wrist-curl.svg</code>, adding <code>-dumbbell</code> when both versions exist.</li>
+  </ol>
+</section>
+
+
+<section>
+  <h2>Categories</h2>
+  <p class="note" style="margin:0 0 14px">Each muscle group has its own page of finished illustrations.</p>
+  <div class="tbl"><table>
+    <tr><th>Category</th><th>Exercises</th><th>Page</th></tr>
+    <tr><td>Biceps</td><td>6</td><td><a href="https://claude.ai/artifact/FJzLsovdnYusAT55idrWu3" target="_blank" rel="noopener" style="color:var(--accent)">Biceps Illustrations</a></td></tr>
+    <tr><td>Triceps</td><td>4</td><td><a href="https://claude.ai/artifact/NnNeCqCkFcPGDmzettd57T" target="_blank" rel="noopener" style="color:var(--accent)">Triceps Illustrations</a></td></tr>
+  </table></div>
+</section>
+
+<section>
+  <h2>Extra poses</h2>
+  <div class="tbl"><table>
+    <tr><th>Pose</th><th>How it is built</th></tr>
+    <tr><td>Dumbbell, end-on</td><td>Disc <code>r 6.6</code> with a white ring <code>r 3.6</code>. Used when the arm hangs at the side.</td></tr>
+    <tr><td>Dumbbell, side</td><td>Handle <code>18 × 4.4</code>, heads <code>6 × 15</code> at ±11, one white highlight per head. Halo drawn once around the whole shape.</td></tr>
+    <tr><td>Incline, side view</td><td>Figure faces right on a 45° back pad. Hip <code>(−14, 114)</code>, shoulder <code>(−46.5, 81.5)</code>, elbow <code>(−46, 114)</code>. Far leg drawn first, near leg on top with a halo.</td></tr>
+    <tr><td>Seated, front view</td><td>Torso from the standing body with <code>translate(0 30) scale(1 .85)</code>. Bench seat at y 108, knees spread to ±28. Working elbow braced at <code>(−21, 102)</code>.</td></tr>
+    <tr><td>Limbs in new poses</td><td>Tapered capsules between joints. Draw every segment of a limb in white first, then in black, so joints stay seamless.</td></tr>
+  </table></div>
+</section>
+
+<section>
+  <div class="src-head"><h2>Reference SVG source</h2><button id="copy" type="button">Copy SVG</button></div>
+  <pre id="src">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 320 180&quot; width=&quot;960&quot; height=&quot;540&quot;&gt;
+  &lt;defs&gt;
+    &lt;radialGradient id=&quot;floor&quot;&gt;
+      &lt;stop offset=&quot;0&quot; stop-color=&quot;#000&quot; stop-opacity=&quot;.22&quot;/&gt;
+      &lt;stop offset=&quot;1&quot; stop-color=&quot;#000&quot; stop-opacity=&quot;0&quot;/&gt;
+    &lt;/radialGradient&gt;
+
+    &lt;!-- athletic body: head, V-torso, shorts, tapered legs (x=0 centre) --&gt;
+    &lt;g id=&quot;body&quot;&gt;
+      &lt;ellipse cx=&quot;0&quot; cy=&quot;164&quot; rx=&quot;40&quot; ry=&quot;5&quot; fill=&quot;url(#floor)&quot;/&gt;
+      &lt;ellipse cx=&quot;0&quot; cy=&quot;17&quot; rx=&quot;9&quot; ry=&quot;11&quot; fill=&quot;#111&quot;/&gt;
+      &lt;path d=&quot;M-4 26 L4 26 L5 31 L-5 31 Z&quot; fill=&quot;#111&quot;/&gt;
+      &lt;path d=&quot;M-5 29 C-8 33 -14 34 -18.5 37.5 C-21.5 41 -21 48 -18 55 C-15.5 66 -12.5 78 -10.5 88
+               L10.5 88 C12.5 78 15.5 66 18 55 C21 48 21.5 41 18.5 37.5 C14 34 8 33 5 29 Z&quot; fill=&quot;#111&quot;/&gt;
+      &lt;path d=&quot;M-11 86 L11 86 L14.5 102 L2 102 L0 95 L-2 102 L-14.5 102 Z&quot; fill=&quot;#111&quot;/&gt;
+      &lt;path d=&quot;M-14.5 99 C-16 112 -14 124 -11 132 C-12.5 140 -11.5 150 -10 158 L-4 158
+               C-4 148 -3 139 -3 131 C-2 120 -1.8 108 -2.2 99 Z&quot; fill=&quot;#111&quot;/&gt;
+      &lt;path d=&quot;M14.5 99 C16 112 14 124 11 132 C12.5 140 11.5 150 10 158 L4 158
+               C4 148 3 139 3 131 C2 120 1.8 108 2.2 99 Z&quot; fill=&quot;#111&quot;/&gt;
+      &lt;path d=&quot;M-10.5 156 Q-15 157 -15 160 L-4 160 L-4 156 Z&quot; fill=&quot;#111&quot;/&gt;
+      &lt;path d=&quot;M10.5 156 Q15 157 15 160 L4 160 L4 156 Z&quot; fill=&quot;#111&quot;/&gt;
+      &lt;line x1=&quot;0&quot; y1=&quot;97&quot; x2=&quot;0&quot; y2=&quot;161&quot; stroke=&quot;#fff&quot; stroke-width=&quot;2.4&quot;/&gt;
+      &lt;!-- negative-space muscle definition --&gt;
+      &lt;g fill=&quot;none&quot; stroke=&quot;#fff&quot; stroke-width=&quot;1.1&quot; stroke-linecap=&quot;round&quot; opacity=&quot;.9&quot;&gt;
+        &lt;path d=&quot;M-12 48 Q-6 53 0 50.5 Q6 53 12 48&quot;/&gt;
+        &lt;path d=&quot;M0 55 L0 84&quot;/&gt;
+        &lt;path d=&quot;M-5 63 L-1.5 63.5 M1.5 63.5 L5 63 M-4.5 71 L-1.5 71.5 M1.5 71.5 L4.5 71&quot;/&gt;
+        &lt;path d=&quot;M-9 118 Q-7.5 125 -6.8 131 M9 118 Q7.5 125 6.8 131&quot;/&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+
+    &lt;!-- upper arm: shoulder at (0,0), elbow at (0,32) --&gt;
+    &lt;path id=&quot;upper&quot; d=&quot;M-4 -2 C-7.5 4 -7 15 -5 22 C-4.2 27 -3.5 30 -3.2 33 L3.2 33
+                        C3.6 26 4 16 3.6 6 C3.2 0 0.8 -3 -4 -2 Z&quot;/&gt;
+    &lt;!-- forearm: elbow at (0,0), wrist at (0,26) — thick near elbow, tapering --&gt;
+    &lt;path id=&quot;fore&quot; d=&quot;M-3.8 -1 C-5 5 -4 15 -2.2 26 L2.2 26 C2.8 16 3.8 6 3.6 -1 Z&quot;/&gt;
+
+    &lt;g id=&quot;plate&quot;&gt;
+      &lt;rect x=&quot;-4&quot; y=&quot;-16&quot; width=&quot;8&quot; height=&quot;32&quot; rx=&quot;2.2&quot; fill=&quot;#111&quot;/&gt;
+      &lt;rect x=&quot;4&quot; y=&quot;-9&quot; width=&quot;4.5&quot; height=&quot;18&quot; rx=&quot;1.5&quot; fill=&quot;#111&quot;/&gt;
+      &lt;line x1=&quot;-1.5&quot; y1=&quot;-12&quot; x2=&quot;-1.5&quot; y2=&quot;12&quot; stroke=&quot;#fff&quot; stroke-width=&quot;.9&quot; stroke-linecap=&quot;round&quot; opacity=&quot;.7&quot;/&gt;
+    &lt;/g&gt;
+
+    &lt;marker id=&quot;tip&quot; viewBox=&quot;0 0 10 10&quot; refX=&quot;6&quot; refY=&quot;5&quot; markerWidth=&quot;4.5&quot; markerHeight=&quot;4.5&quot; orient=&quot;auto&quot;&gt;
+      &lt;path d=&quot;M0 0 L10 5 L0 10 Z&quot; fill=&quot;#111&quot;/&gt;
+    &lt;/marker&gt;
+  &lt;/defs&gt;
+
+  &lt;rect width=&quot;320&quot; height=&quot;180&quot; fill=&quot;#fff&quot;/&gt;
+
+  &lt;!-- ================= 1 · START ================= --&gt;
+  &lt;g transform=&quot;translate(80 8)&quot;&gt;
+    &lt;use href=&quot;#body&quot;/&gt;
+    &lt;g fill=&quot;#111&quot; stroke=&quot;#fff&quot; stroke-width=&quot;2.6&quot; paint-order=&quot;stroke&quot; stroke-linejoin=&quot;round&quot;&gt;
+      &lt;use href=&quot;#upper&quot; transform=&quot;translate(-20.5 41) rotate(5)&quot;/&gt;
+      &lt;use href=&quot;#fore&quot; transform=&quot;translate(-23 73) rotate(-7)&quot;/&gt;
+      &lt;g transform=&quot;scale(-1 1)&quot;&gt;
+        &lt;use href=&quot;#upper&quot; transform=&quot;translate(-20.5 41) rotate(5)&quot;/&gt;
+        &lt;use href=&quot;#fore&quot; transform=&quot;translate(-23 73) rotate(-7)&quot;/&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;line x1=&quot;-54&quot; y1=&quot;100&quot; x2=&quot;54&quot; y2=&quot;100&quot; stroke=&quot;#fff&quot; stroke-width=&quot;6.5&quot;/&gt;
+    &lt;line x1=&quot;-54&quot; y1=&quot;100&quot; x2=&quot;54&quot; y2=&quot;100&quot; stroke=&quot;#111&quot; stroke-width=&quot;3.2&quot; stroke-linecap=&quot;round&quot;/&gt;
+    &lt;use href=&quot;#plate&quot; transform=&quot;translate(-43 100) scale(-1 1)&quot;/&gt;
+    &lt;use href=&quot;#plate&quot; transform=&quot;translate(43 100)&quot;/&gt;
+    &lt;g fill=&quot;#111&quot; stroke=&quot;#fff&quot; stroke-width=&quot;1.6&quot; paint-order=&quot;stroke&quot;&gt;
+      &lt;ellipse cx=&quot;-20&quot; cy=&quot;100&quot; rx=&quot;4&quot; ry=&quot;4.6&quot;/&gt;
+      &lt;ellipse cx=&quot;20&quot; cy=&quot;100&quot; rx=&quot;4&quot; ry=&quot;4.6&quot;/&gt;
+    &lt;/g&gt;
+  &lt;/g&gt;
+
+  &lt;!-- ================= 2 · CURL ================= --&gt;
+  &lt;g transform=&quot;translate(240 8)&quot;&gt;
+    &lt;!-- ghost of the starting bar --&gt;
+    &lt;g opacity=&quot;.14&quot;&gt;
+      &lt;line x1=&quot;-54&quot; y1=&quot;100&quot; x2=&quot;54&quot; y2=&quot;100&quot; stroke=&quot;#111&quot; stroke-width=&quot;3.2&quot; stroke-linecap=&quot;round&quot;/&gt;
+      &lt;use href=&quot;#plate&quot; transform=&quot;translate(-43 100) scale(-1 1)&quot;/&gt;
+      &lt;use href=&quot;#plate&quot; transform=&quot;translate(43 100)&quot;/&gt;
+    &lt;/g&gt;
+    &lt;use href=&quot;#body&quot;/&gt;
+    &lt;g fill=&quot;#111&quot; stroke=&quot;#fff&quot; stroke-width=&quot;2.6&quot; paint-order=&quot;stroke&quot; stroke-linejoin=&quot;round&quot;&gt;
+      &lt;use href=&quot;#upper&quot; transform=&quot;translate(-20.5 41) rotate(5)&quot;/&gt;
+      &lt;use href=&quot;#fore&quot; transform=&quot;translate(-23 73) rotate(150)&quot;/&gt;
+      &lt;g transform=&quot;scale(-1 1)&quot;&gt;
+        &lt;use href=&quot;#upper&quot; transform=&quot;translate(-20.5 41) rotate(5)&quot;/&gt;
+        &lt;use href=&quot;#fore&quot; transform=&quot;translate(-23 73) rotate(150)&quot;/&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;line x1=&quot;-64&quot; y1=&quot;50&quot; x2=&quot;64&quot; y2=&quot;50&quot; stroke=&quot;#fff&quot; stroke-width=&quot;6.5&quot;/&gt;
+    &lt;line x1=&quot;-64&quot; y1=&quot;50&quot; x2=&quot;64&quot; y2=&quot;50&quot; stroke=&quot;#111&quot; stroke-width=&quot;3.2&quot; stroke-linecap=&quot;round&quot;/&gt;
+    &lt;use href=&quot;#plate&quot; transform=&quot;translate(-53 50) scale(-1 1)&quot;/&gt;
+    &lt;use href=&quot;#plate&quot; transform=&quot;translate(53 50)&quot;/&gt;
+    &lt;g fill=&quot;#111&quot; stroke=&quot;#fff&quot; stroke-width=&quot;1.6&quot; paint-order=&quot;stroke&quot;&gt;
+      &lt;ellipse cx=&quot;-36&quot; cy=&quot;50&quot; rx=&quot;4&quot; ry=&quot;4.6&quot;/&gt;
+      &lt;ellipse cx=&quot;36&quot; cy=&quot;50&quot; rx=&quot;4&quot; ry=&quot;4.6&quot;/&gt;
+    &lt;/g&gt;
+    &lt;!-- swept motion arcs --&gt;
+    &lt;g fill=&quot;none&quot; stroke=&quot;#111&quot; stroke-linecap=&quot;round&quot;&gt;
+      &lt;path d=&quot;M-46 98 Q-70 84 -68 72&quot; stroke-width=&quot;1.8&quot; marker-end=&quot;url(#tip)&quot;/&gt;
+      &lt;path d=&quot;M-52 97 Q-74 86 -73 76&quot; stroke-width=&quot;1&quot; opacity=&quot;.35&quot;/&gt;
+      &lt;path d=&quot;M46 98 Q70 84 68 72&quot; stroke-width=&quot;1.8&quot; marker-end=&quot;url(#tip)&quot;/&gt;
+      &lt;path d=&quot;M52 97 Q74 86 73 76&quot; stroke-width=&quot;1&quot; opacity=&quot;.35&quot;/&gt;
+    &lt;/g&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;
+</pre>
+</section>
+</div>
+
+<script>
+document.getElementById('copy').addEventListener('click',function(){
+  var b=this, t=document.getElementById('src').textContent;
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('src'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, press copy';}
+  try{navigator.clipboard.writeText(t).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy SVG'},1600)},sel)}catch(e){sel()}
+});
+</script>
+
+</body></html>
